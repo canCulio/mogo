@@ -16,6 +16,15 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
 }
 
+hr{
+    border: 0;
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -199,10 +208,16 @@ h1,h2,h3,h4,h5,h6{
 .section{
     padding: 80px 0;
 }
+.section--devices{
+    background: url("../img/deviceground.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+
+}
 .section-header{
     width: 100%;
     max-width: 950px;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
@@ -309,4 +324,48 @@ h1,h2,h3,h4,h5,h6{
 .stat-text{
     font-size: 14px;
     text-transform: uppercase;
+}
+
+/* Services */
+
+.services{
+    display: flex;
+}
+
+.services-item{
+    flex: 1 1 0;
+    padding-left: 85px;
+    position: relative;
+    padding-right: 35px;
+}
+
+.services-icon{
+    position: absolute;
+
+    top: 0;
+    left: 28px;
+    z-index: 1;
+}
+
+.services-title{
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.services-text{
+    font-size: 15px;
+    color: #999;
+
+}
+
+.devices{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.devices-item{
+    display: block;
 }
