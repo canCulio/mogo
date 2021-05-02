@@ -212,8 +212,14 @@ hr{
     background: url("../img/deviceground.jpg") center no-repeat;
     background-size: cover;
     padding-bottom: 0;
+    margin-bottom: 40px;
 
 }
+
+.section--gray{
+    background-color: #f8f8f8;
+}
+
 .section-header{
     width: 100%;
     max-width: 950px;
@@ -360,12 +366,175 @@ hr{
 
 }
 
+/* Devices */
+
 .devices{
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
 }
 
 .devices-item{
     display: block;
+}
+
+.devices-item--iphone{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 1;
+}
+
+.wedo{
+    display: flex;
+}
+
+.wedo-item{
+    width: 50%;
+}
+
+/* Accordion */
+
+.accordion-item {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+
+.accordion-item.active
+.accordion-content{
+    display: block;
+}
+
+.accordion-item.active
+.accordion-header{
+    border-bottom-color: #e5e5e5;
+}
+
+.accordion-item.active
+.accordion-header::after{
+    transform: translateY(-50%) rotate(-45deg);
+    margin-top: 5px;
+}
+
+.accordion-header{
+    border-bottom: 1px solid transparent;
+    padding: 15px 20px 15px 65px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.accordion-header::after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    
+}
+
+.accordion-icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.accordion-content{
+    padding: 15px 20px;
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+    font-weight: 300;
+    display: none;
+}
+.accordion-title{
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+/* Reviews */
+
+.reviews{
+    padding: 0 110px;
+    position: relative;
+}
+.reviews-item{
+    padding-left: 205px;
+    position: relative;
+}
+
+.reviews-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 2px solid #95e1d3;
+}
+
+.reviews-text{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.reviews-author{
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.reviews-author::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-right: 10px;
+}
+
+.reviews-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 0;
+    color: transparent;
+}
+
+.reviews-btn::after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    
+}
+
+.reviews-btn--prev{
+    left: 0;
+    transform:  rotate(-45deg);
+}
+
+.reviews-btn--next{
+    right: 0;
+    transform:  rotate(135deg);
 }
