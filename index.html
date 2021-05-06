@@ -11,19 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>Mogo</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-inner">
-                <div class="header-logo">Mogo</div>
-                <nav class="nav">
-                    <a class="nav-link active" href="#">About</a>
-                    <a class="nav-link" href="#">Service</a>
-                    <a class="nav-link" href="#">Blog</a>
-                    <a class="nav-link" href="#">Work</a>
-                    <a class="nav-link" href="#">Contact</a>
+                <div class="header-logo" data-scroll="#intro">Mogo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav-link" href="#" data-scroll="#about">About</a>
+                    <a class="nav-link" href="#" data-scroll="#service">Service</a>
+                    <a class="nav-link" href="#" data-scroll="#blog">Blog</a>
+                    <a class="nav-link" href="#" data-scroll="#work">Work</a>
+                    <a class="nav-link" href="#" data-scroll="#footer">Contact</a>
                     <a class="nav-link" href="#">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -32,7 +33,7 @@
                     </a>
                 </nav>
 
-                <button class="nav-toggle" type="button">
+                <button class="nav-toggle" id="nav-toggle" type="button">
                     <span class="nav-toggle-item">Menu</span>
                 </button>
             </div>
@@ -41,7 +42,8 @@
 
     <div class="page">
 
-        <div class="intro">
+        <!-- Intro -->
+        <div class="intro" id="intro">
             <div class="container">
                 <div class="intro-inner">
                     <h2 class="intro-subtitle">Creative Template</h2>
@@ -61,7 +63,8 @@
             </div>
         </div>
         
-    <section class="section">
+    <!-- About -->    
+    <section class="section" id="about">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-subtitle">What we do</h3>
@@ -101,6 +104,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Statistics -->
     <div class="statistics">
         <div class="container">
             <div class="stat">
@@ -129,7 +134,8 @@
         </div>
     </div>
 
-    <section class="section">
+    <!-- Services -->
+    <section class="section" id="service">
         <div class="container">
 
             <div class="section-header">
@@ -182,6 +188,7 @@
         </div>
     </section>
 
+    <!-- Devices -->
     <section class="section section--devices">
         <div class="container">
 
@@ -196,7 +203,7 @@
         </div>
     </section>
 
-
+    <!-- Wedo -->
     <section class="section">
         <div class="container">
 
@@ -216,36 +223,36 @@
                 </div>
                 <div class="wedo-item">
                     <div class="accordion">
-                        <div class="accordion-item">
-                            <div class="accordion-header">
+                        <div class="accordion-item" data-collapse="#wedo1">
+                            <div class="accordion-header" >
                                 <img class="accordion-icon" src="/img/icon1.png" alt="">
                                 <div class="accordion-title">Photography</div>
                             </div>
-                            <div class="accordion-content">
+                            <div class="accordion-content" id="wedo1">
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                                     Cum sit aut voluptatum laborum assumenda eius quidem maxime iure eum, ducimus, 
                                     ad tenetur possimus labore debitis magnam dignissimos nemo enim laboriosam?</p>
                             </div>
                         </div>
 
-                        <div class="accordion-item active">
-                            <div class="accordion-header">
+                        <div class="accordion-item active" data-collapse="#wedo2">
+                            <div class="accordion-header" >
                                 <img class="accordion-icon" src="/img/icon2.png" alt="">
                                 <div class="accordion-title">Creativity</div>
                             </div>
-                            <div class="accordion-content">
+                            <div class="accordion-content" id="wedo2">
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                                     Cum sit aut voluptatum laborum assumenda eius quidem maxime iure eum, ducimus, 
                                     ad tenetur possimus labore debitis magnam dignissimos nemo enim laboriosam?</p>
                             </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-collapse="#wedo3">
                             <div class="accordion-header">
                                 <img class="accordion-icon" src="/img/icon3.png" alt="">
                                 <div class="accordion-title">Web Design</div>
                             </div>
-                            <div class="accordion-content">
+                            <div class="accordion-content" id="wedo3">
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                                     Cum sit aut voluptatum laborum assumenda eius quidem maxime iure eum, ducimus, 
                                     ad tenetur possimus labore debitis magnam dignissimos nemo enim laboriosam?</p>
@@ -258,22 +265,38 @@
         </div>
     </section>
 
+    <!-- Reviews 1 -->
     <div class="section section--gray">
         <div class="container">
             <div class="reviews">
-                <a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
-                <a class="reviews-btn reviews-btn--next" href="#">Next</a>
-                <div class="reviews-item">
-                    <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
-                    <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
-                        Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
-                        <div class="reviews-author">John Doe</div>
+                <!--<a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
+                <a class="reviews-btn reviews-btn--next" href="#">Next</a>-->
+                <div data-slider>
+                    <div>
+                        <div class="reviews-item">
+                            <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
+                            <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
+                                Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
+                                <div class="reviews-author">John Doe</div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="reviews-item">
+                            <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
+                            <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
+                                Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
+                                <div class="reviews-author">John Doe</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Team -->
     <section class="section">
         <div class="container">
             
@@ -374,6 +397,7 @@
         </div>
     </section>
 
+    <!-- Logos -->
     <div class="section section--gray">
         <div class="container">
             <div class="logos">
@@ -400,7 +424,8 @@
     </div>
 
 
-    <section class="section">
+    <!-- Works -->
+    <section class="section" id="work">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-subtitle">What we do</h3>
@@ -472,22 +497,38 @@
         </div>
     </section>
 
+    <!-- Reviews 2 -->
     <div class="section">
         <div class="container">
             <div class="reviews">
-                <a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
-                <a class="reviews-btn reviews-btn--next" href="#">Next</a>
-                <div class="reviews-item">
-                    <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
-                    <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
-                        Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
-                        <div class="reviews-author">John Doe</div>
+                <!--<a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
+                <a class="reviews-btn reviews-btn--next" href="#">Next</a>-->
+                <div data-slider>
+                    <div>
+                        <div class="reviews-item">
+                            <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
+                            <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
+                                Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
+                                <div class="reviews-author">John Doe</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="reviews-item">
+                            <img class="reviews-photo" src="/img/reviewz.jpg" alt="">
+                            <div class="reviews-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Fugiat unde eos provident accusantium, tempore molestias optio incidunt. 
+                                Rerum, adipisci? Placeat amet suscipit aliquam enim nihil aspernatur assumenda ut repellendus quia.</div>
+                                <div class="reviews-author">John Doe</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Clients -->
     <section class="section section--clients">
         <div class="container">
             <div class="section-header">
@@ -541,7 +582,8 @@
         </div>
     </section>
 
-    <section class="section">
+    <!-- Blog -->
+    <section class="section" id="blog">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-subtitle">Our stories</h3>
@@ -633,6 +675,7 @@
         </div>
     </section>
 
+    <!-- Map -->
     <section class="section section--map">
         <div class="container">
             <div class="map">
@@ -644,7 +687,8 @@
     </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" id="footer">
         <div class="container">
 
             <div class="footer-inner">
@@ -744,5 +788,9 @@
 
 </div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>
