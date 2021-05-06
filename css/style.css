@@ -25,6 +25,11 @@ hr{
     margin: 40px 0;
 }
 
+/* Page */
+.page{
+    overflow: hidden;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -42,6 +47,8 @@ hr{
     justify-content: center;
     background: url("../img/intro.jpg") no-repeat;
     background-size: cover;
+    min-height: 820px;
+    position: relative;
 }
 
 .intro-inner{
@@ -85,6 +92,21 @@ hr{
     right: 0;
     z-index: 1000;
     padding-top: 30px;
+}
+.header.fixed{
+    
+    background-color: #eb8b8d;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header.active{
+    background-color: #eb8b8d;
+
 }
 
 .header-inner{
@@ -139,6 +161,71 @@ hr{
     opacity: 1;
 }
 
+/* Nav Toggle */
+.nav-toggle{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    width: 30px;
+    padding: 10px 0;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.nav-toggle-item{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transition: background .2s m;
+}
+
+.nav-toggle.active .nav-toggle-item{
+    background: none;
+}
+
+
+
+.nav-toggle-item::before,
+.nav-toggle-item::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    z-index: 1;
+    transition: transform .2s linear;
+}
+.nav-toggle-item::before{
+    top: -8px;
+
+}
+.nav-toggle-item::after{
+    bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle-item::before{
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
+}
+.nav-toggle.active .nav-toggle-item::after{
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
+}
 
 /* Button */
 .btn{
@@ -208,6 +295,7 @@ hr{
 /* Section */
 .section{
     padding: 80px 0;
+    overflow: hidden;
 }
 .section--devices{
     background: url("../img/deviceground.jpg") center no-repeat;
@@ -529,6 +617,9 @@ hr{
 }
 
 .reviews-photo{
+    display: block;
+    width: 210px;
+    height: 210px;
     position: absolute;
     border-radius: 50%;
     top: 0;
@@ -632,6 +723,15 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+}
+.logos-item{
+    padding: 0 15px;
+}
+.logos-img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Works */
@@ -746,6 +846,7 @@ hr{
 /* Blog */
 .blog{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .blog-item{
@@ -862,6 +963,11 @@ hr{
     padding-bottom: 65px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.footer-col{
+    padding: 0 15px;
 }
 
 .footer-col--first{
@@ -1032,11 +1138,13 @@ hr{
 .insta-item{
     
     border-bottom: 1px solid #fff;
-    width: 32.33333%;
+    width: 33%;
 }
 
 .insta-item img{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Copyright */
@@ -1062,6 +1170,11 @@ hr{
     }
     .intro-subtitle{
         font-size: 52px;
+    }
+
+    /* Reviews */
+    .reviews-text{
+        font-size: 20px;
     }
 }
 
@@ -1098,12 +1211,78 @@ hr{
         border-bottom: 0;
     }
     
+    /* Reviews */
+    .reviews{
+        padding: 0 60px;
+    }
+    .reviews-photo{
+        height: 150px;
+        width: 150px;
+    }
+    .reviews-item{
+        padding-left: 175px;
+    }
+    /* Clients */
+    .clients{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .clients-item{
+        width: 100%;
+        padding-right: 0;
+    }
+    .clients-item:last-child{
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+    .footer-col--first{
+        width: 100%;
+    }
+    .footer-col--second,
+    .footer-col--third{
+        width: 50%;
+    }
+
+    /* Insta */
+    .insta{
+        justify-content: flex-start;
+    }
+    .insta-item{
+        width: auto;
+        border-right: 1px solid white;
+    }
 }
 
 @media(max-width: 770px){
+    /* Intro */
+    .intro{
+        min-height: 650px;  
+    }
+
+    /* Header */
+    .header{
+        padding: 10px 0;
+    }
+
     /* Nav */
    .nav{
        display: none;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background-color: #eb8b8d;
+       width: 100%;
+   }
+
+   .nav-link{
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+   }
+
+   .nav-toggle{
+       display: block;
    }
    /* Slider */
    .slider-text{
@@ -1158,10 +1337,54 @@ hr{
     .wedo-item{
         width: 100%;
     }
+
+    /* Reviews */
+    .reviews-photo{
+        position: static;
+        margin: 0 auto 20px;
+    }
+    .reviews-item{
+        padding-left: 0;
+    }
+    .reviews-text{
+        font-size: 16px;
+    }
+    .reviews-author{
+        font-size: 20px;
+    }
+
+    /* Works */
+    .works{
+        flex-wrap: wrap;
+    }
+    .works-col{
+        flex: none;
+        width: 50%;
+    }
+    /* Blog */
+    .blog{
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .blog-item{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog-item:last-child{
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+   
+    .footer-col--second,
+    .footer-col--third{
+        width: 100%;
+    }
 }
 
 @media(max-width: 575px){
     /* Intro */
+    
     .intro-title{
         font-size: 40px;
     }
@@ -1205,4 +1428,70 @@ hr{
         bottom: -50px;
         right: -80px;
     }
+
+    /* Reviews */
+    .reviews{
+        padding: 0;
+    }
+    .reviews-btn{
+        top: 18%;
+    }
+
+    /* Logos */
+    .logos{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logos-item{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .logos-img{
+        margin: 0 auto;
+    }
+
+    /* Works */
+    
+    .works-col{
+        width: 100%;
+    }
+
+    /* Clients */
+    .clients-img{
+        position: static;
+    }
+    .clients-item{
+        padding-left: 0;
+        text-align: center;
+    }
+    .clients-text::before{
+        margin: 15px auto;
+    }
+
+    /* Subscribe */
+    .subscribe{
+        flex-wrap: wrap;
+        max-width: none;
+    }
+
+    .subscribe-input{
+        margin-bottom: 10px;
+        border-right: 1px solid #e7e7e7;
+    }
+
+    .subscribe-input,
+    .subscribe-btn{
+        width: 100%;
+    }
+
+    /* Blog */
+    .blog-img{
+        width: 80px;
+        height: 50px;
+    }
+    .blog-title{
+        font-size: 10px;
+    }
+
+    
 }
