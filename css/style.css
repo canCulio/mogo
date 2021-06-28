@@ -702,6 +702,97 @@ hr{
     transform:  rotate(135deg);
 }
 
+/* Quotes */
+.quote-container {
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.section-quote {
+    width: 100%;
+    max-width: 1802px;
+    padding: 0 15px;
+    margin: 0 auto;
+    
+    min-height: 100vh;
+    background-color: #e6e2e7;
+background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e98698' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #000;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quotes-item{
+    padding-left: 84px;
+    position: relative;
+    min-height: 210px;
+}
+
+
+.quote-text{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.quote-author{
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.long-quote {
+    font-size: 2rem;
+}
+
+.fa-quote-left {
+    font-size: 4rem;
+}
+.twitter-button:hover {
+    color: #38a1f3;
+}
+
+.fa-twitter {
+    font-size: 1.5rem;
+}
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    bottom: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    padding: 0.5 rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(121,121,121,0.65);
+}
+
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255,255,255,0.65);
+}
+
+
 /* Social */
 
 .social{
@@ -941,6 +1032,7 @@ hr{
 .blog-stat-item i{
     color: #95e1d3;
 }
+
 
 /* Map */
 
