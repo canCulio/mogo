@@ -1,6 +1,4 @@
-
 $(function(){
-
     const quoteContainer = document.getElementById('quote-container');
     const quoteText = document.getElementById('quote');
     const authorText = document.getElementById('author');
@@ -136,6 +134,9 @@ $(function(){
         const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
         window.open(twitterUrl, '_blank');
     }
+
+    //Animation, toggle navbar
+    
     
     // Event listeners
     newQuoteBtn.addEventListener('click',newQuote);
